@@ -1,4 +1,4 @@
-# Logs
+# 🧹 로그 파일
 logs
 *.log
 npm-debug.log*
@@ -7,18 +7,35 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# 📦 Node.js
 node_modules
+
+# 🔧 Vite 빌드 결과물
 dist
 dist-ssr
-*.local
+
+# 🌱 환경 변수 파일
+.env
+.env.*.local
+
+# 📁 IDE & 에디터 설정
+.vscode/
+.idea/
+*.iml
+
+# 🗂 Windows 전용 시스템 파일
+Thumbs.db
+desktop.ini
+
+# 🧼 Prettier 캐시
+.prettier-cache
 
 # Editor directories and files
-.vscode/*
 !.vscode/extensions.json
-.idea
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+node_modules/
