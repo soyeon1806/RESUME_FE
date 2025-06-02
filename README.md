@@ -1,54 +1,21 @@
-# React + TypeScript + Vite
+## 🧾 Git 커밋 컨벤션
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+| 이모지 | 태그       | 설명                           |
+| ------ | ---------- | ------------------------------ |
+| ✨     | `feat`     | 새로운 기능 추가               |
+| 🐛     | `fix`      | 버그 수정                      |
+| ♻️     | `refactor` | 코드 리팩토링                  |
+| 🎨     | `design`   | UI 스타일 수정                 |
+| 🔥     | `del`      | 코드 삭제 / 미사용 리소스 제거 |
+| 📝     | `chore`    | 문서 작성/수정                 |
+| 🚀     | `deploy`   | 배포 관련 작업                 |
+| ✅     | `test`     | 테스트 코드 추가/수정          |
 
-Currently, two official plugins are available:
+### 💡 커밋 메시지 예시
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
+```bash
+git commit -m "✨ feat: 테마 선택 기능 추가"
+git commit -m "🐛 fix: 로그인 시 500 오류 수정"
+git commit -m "🎨 design: 로그인 버튼 색상 변경"
+git commit -m "🔥 del: 사용하지 않는 console.log 제거"
 ```
