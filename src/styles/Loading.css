@@ -1,0 +1,44 @@
+/* 전체 로딩 화면 컨테이너 스타일 */
+.loading-container {
+  height: 100vh; /* 화면 전체 높이 */
+  display: flex; /* 자식 요소들을 flex로 정렬 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  flex-direction: column; /* 세로 방향 정렬 */
+  position: relative; /* .dot 위치 기준 */
+  font-size: 2rem; /* 기본 글자 크기 */
+  font-weight: bold; /* 글자 굵게 */
+  font-family: 'Courier New', Courier, monospace; /* 타자기 느낌 글꼴 */
+  color: #333; /* 기본 텍스트 색상 */
+}
+
+/* 알파벳 글자들을 감싸는 컨테이너 */
+.letters {
+  display: flex; /* 가로 정렬 */
+  gap: 1rem; /* 글자 간 간격 */
+  position: relative; /* 내부 .dot와의 상대 위치 설정 */
+}
+
+/* 각 글자의 기본 상태 */
+.letter {
+  transition:
+    transform 0.3s ease-in-out,
+    color 0.3s; /* 크기 및 색상 변경 애니메이션 */
+}
+
+/* 활성화된 글자의 스타일 */
+.letter.active {
+  transform: scale(1.4); /* 크기 확대 */
+  color: #f06292; /* 색상 강조 */
+}
+
+/* 글자 위를 따라다니는 점 애니메이션 */
+.dot {
+  position: absolute;
+  top: -2rem; /* 글자 위로 배치 */
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; /* 동그란 모양 */
+  background-color: #f06292;
+  transition: left 0.3s ease-in-out; /* 위치 이동 애니메이션 */
+}

@@ -1,27 +1,74 @@
 {
   "compilerOptions": {
+    // TypeScript가 빌드 정보를 저장할 임시 파일 위치
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+
+    // 변환할 JavaScript 버전
     "target": "ES2020",
+
+    // 클래스 필드 선언 방식 통일
     "useDefineForClassFields": true,
+
+    // 사용할 전역 라이브러리들
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
+
+    // 사용할 모듈 시스템
     "module": "ESNext",
+
+    // 외부 라이브러리 타입 검사 생략
     "skipLibCheck": true,
 
-    /* Bundler mode */
+    /* 📦 번들러(Vite 등)에 맞춘 세부 설정들 */
+
+    // 모듈을 어떻게 찾을지 결정
     "moduleResolution": "bundler",
+
+    // .ts 확장자를 가진 파일도 import 허용
     "allowImportingTsExtensions": true,
+
+    // 모듈import / export 구문을 그대로 유지
     "verbatimModuleSyntax": true,
+
+    // 모듈 방식으로 파일을 강제 인식
     "moduleDetection": "force",
+
+    // 빌드시 실제 파일을 출력하지 않음 (형식 검사만 수행)
     "noEmit": true,
+
+    // JSX 문법을 React 방식으로 해석
     "jsx": "react-jsx",
 
-    /* Linting */
+    /* 🧹 코드 검사 및 품질 향상 옵션들 */
+
+    // 엄격한 타입 검사
     "strict": true,
+
+    // 사용하지 않는 지역 변수에 오류 표시
     "noUnusedLocals": true,
+
+    // 사용하지 않는 매개변수에 오류 표시
     "noUnusedParameters": true,
+
+    // 사용되지 않는 구문 무시
     "erasableSyntaxOnly": true,
+
+    // switch 문에서 break 누락 방지
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+
+    // 예측할 수 없는 부작용 import 방지
+    "noUncheckedSideEffectImports": true,
+
+    /* 📁 경로 설정 */
+
+    // 상대 경로가 아닌 절대 경로를 사용할 기준 위치
+    "baseUrl": ".",
+
+    // @를 src 경로로 매핑
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
+
+  // TypeScript가 검사할 파일 범위 (src 폴더 안쪽만 포함)
   "include": ["src"]
 }

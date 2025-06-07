@@ -1,0 +1,90 @@
+/* 기본 메뉴 스타일 */
+.navbar-container {
+  display: flex; /* 가로 정렬 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  padding: 1.2rem 2rem; /* 내부 여백 */
+  border-bottom: 1px solid #ccc; /* 아래 테두리 */
+  background-color: #fff; /* 흰색 배경 */
+  border-radius: 12px 12px 0 0; /* 상단 모서리 둥글게 */
+  position: relative; /* 햄버거 버튼 위치 기준 */
+}
+
+/* 메뉴 항목 */
+.menu {
+  display: flex;
+  width: 80%; /* 전체 폭의 80% 사용 */
+  justify-content: space-between; /* 양 끝 정렬 */
+  font-weight: bold;
+}
+
+/* 각 메뉴 항목 스타일 */
+.menu span {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  background-color: white;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out; /* hover 효과 부드럽게 */
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  flex: 1; /* 각 항목 동일한 너비 */
+}
+
+/* 메뉴 항목 hover 시 강조 효과 */
+.menu span:hover {
+  background-color: #fce4ec; /* 옅은 분홍 배경 */
+  transform: scale(1.02); /* 살짝 확대 */
+  cursor: pointer;
+}
+
+/* 햄버거 버튼 (기본은 숨김 상태) */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1.2rem;
+  left: 2rem;
+  z-index: 1000; /* 위에 표시되도록 */
+}
+
+/* 작은 화면일 때 메뉴 숨기고 햄버거 표시 */
+@media (max-width: 768px) {
+  /* 햄버거 버튼만 보이게 함 */
+  .hamburger {
+    display: block;
+  }
+
+  /* 메뉴 전체 숨기기, 햄버거 버튼 누르면 열리게 설정 */
+  navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: row;
+    width: 100%;
+    max-width: 240px;
+    margin-top: 1rem;
+    align-items: center;
+  }
+
+  /* 메뉴 열렸을 때 보여주는 스타일 (open 클래스 추가됨) */
+  .menu.open {
+    display: flex;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+  }
+
+  /* 메뉴가 열렸을 때 클래스 적용 */
+  .navbar-container.open .menu {
+    display: flex;
+  }
+}
