@@ -1,6 +1,6 @@
 import '@/styles/Navbar.css';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const Navbar = () => {
   // 메뉴 열림 & 닫힘 상태를 저장하는 상태
