@@ -1,13 +1,29 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- 반응형 웹을 위한 설정 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+
+    <!-- 브라우저 탭에 표시될 제목 -->
+    <title>Soyeon's resume</title>
+
+    <!-- Google Fonts 서버에 미리 연결 (로딩 최적화) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- 사용할 웹 폰트 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <!-- React 앱이 마운트될 루트 요소 -->
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- React 웹 진입점 불러오기 -->
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
