@@ -1,0 +1,41 @@
+/* 로그인 폼 전체 컨테이너 스타일 */
+.login-form {
+  background-color: white; /* 배경 색상: 흰색 */
+  padding: 2rem; /* 내부 여백 */
+  border-radius: 20px; /* 둥근 모서리 */
+  width: 320px; /* 너비 고정 */
+  text-align: center; /* 내부 텍스트 가운데 정렬 */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+  box-sizing: border-box; /* 패딩 포함한 사이징 처리 */
+}
+
+/* 프로필 이미지 스타일 */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px; /* 이미지도 둥글게 */
+  margin-bottom: 1rem;
+}
+
+/* 아이디/비밀번호 입력 필드 스타일 */
+.login-input {
+  display: block;
+  width: 80%; /* 부모의 80% 너비 */
+  padding: 0.8rem;
+  margin: 0 auto 1rem; /* 가운데 정렬 및 아래 간격 */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* 로그인 버튼 스타일 */
+.login-button {
+  width: 80%;
+  padding: 0.8rem;
+  background-color: #f2a8a8;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer; /* 마우스 오버 시 커서 변경 */
+}
