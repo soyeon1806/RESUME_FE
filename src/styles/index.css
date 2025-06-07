@@ -1,0 +1,10 @@
+body {
+  font-family: 'Gowun Dodum', sans-serif;
+  margin: 0;
+  background-color: #fceef2;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #f19cbb;
+}
