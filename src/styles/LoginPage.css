@@ -1,0 +1,18 @@
+.login-page {
+  /* 배경 이미지 설정 - 프로젝트 경로 기준 */
+  background-image: url('@/assets/background-img.png');
+
+  /* 배경 이미지가 영역 전체를 덮도록 설정 */
+  background-size: cover;
+
+  /* 배경 이미지가 가운데 정렬되도록 설정 */
+  background-position: center;
+
+  /* 화면 전체 높이 사용 (100% viewport height) */
+  height: 100vh;
+
+  /* 내부 요소를 중앙 정렬하기 위한 Flexbox 설정 */
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+}
