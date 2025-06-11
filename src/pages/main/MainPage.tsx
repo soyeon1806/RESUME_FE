@@ -19,6 +19,7 @@ const MainPage: React.FC = () => {
     >
       {/* 관리자 로그인 버튼 */}
       <button
+        className="admin-login-button"
         style={{
           position: 'absolute',
           top: '20px',
@@ -28,7 +29,6 @@ const MainPage: React.FC = () => {
           padding: '0.4rem 0.8rem',
           backgroundColor: 'white',
           fontWeight: 'bold',
-          cursor: 'pointer',
         }}
         // 클릭 시 로그인 페이지로 이동
         onClick={() => (window.location.href = '/login')}

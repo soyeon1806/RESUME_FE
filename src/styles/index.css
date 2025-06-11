@@ -7,7 +7,34 @@ body {
     auto;
 }
 
+button:hover,
+.navbar-container span:hover,
+a:hover {
+  cursor:
+    url('/hover-mouse-img.png') 16 16,
+    pointer;
+}
+
+body.text-selecting {
+  cursor:
+    url('/drag-mouse-img.png') 16 16,
+    text;
+}
+
+.admin-login-button {
+  cursor:
+    url('/hover-mouse-img.png') 16 16,
+    pointer;
+}
+
 input:focus {
   outline: none;
   border: 1px solid #f19cbb;
+}
+
+input,
+[contenteditable='true'] {
+  cursor:
+    url('/drag-mouse-img.png') 16 16,
+    text;
 }
