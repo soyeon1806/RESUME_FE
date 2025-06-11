@@ -35,7 +35,9 @@
 .menu span:hover {
   background-color: #fce4ec; /* 옅은 분홍 배경 */
   transform: scale(1.02); /* 살짝 확대 */
-  cursor: pointer;
+  cursor:
+    url('/hover-mouse-img.png') 16 16,
+    pointer;
 }
 
 /* 햄버거 버튼 (기본은 숨김 상태) */
@@ -49,6 +51,12 @@
   top: 1.2rem;
   left: 2rem;
   z-index: 1000; /* 위에 표시되도록 */
+}
+
+.hamburger:hover {
+  cursor:
+    url('/hover-mouse-img.png') 16 16,
+    pointer;
 }
 
 /* 작은 화면일 때 메뉴 숨기고 햄버거 표시 */
