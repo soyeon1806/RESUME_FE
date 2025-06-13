@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 
 import LoginPage from '@/pages/login/LoginPage';
@@ -40,12 +40,10 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/login" element={<LoginPage />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="/login" element={<LoginPage />} />
+    </Routes>
   );
 };
 
