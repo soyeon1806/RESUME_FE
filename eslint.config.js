@@ -1,9 +1,9 @@
-import js from '@eslint/js';
 import globals from 'globals';
+import importPlugin from 'eslint-plugin-import';
+import js from '@eslint/js';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
-import importPlugin from 'eslint-plugin-import';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
@@ -11,7 +11,7 @@ export default tseslint.config(
     ignores: ['dist', 'node_modules'],
   },
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.{js,ts,tsx}'],
     languageOptions: {
       parser: tseslint.parser,
       ecmaVersion: 2020,
@@ -41,6 +41,22 @@ export default tseslint.config(
       'react/jsx-indent': ['error', 2],
       'react/jsx-indent-props': ['error', 2],
       'import/order': ['warn', { 'newlines-between': 'always' }],
+    },
+  },
+  {
+    files: [
+      '**/*.test.{js,ts,tsx}',
+      '**/__tests__/**/*.{js,ts,tsx}',
+      'src/setupTests.ts',
+    ],
+    languageOptions: {
+      parser: tseslint.parser,
+      ecmaVersion: 2020,
+      globals: {
+        ...globals.browser,
+        ...globals.jest,
+        ...globals.node,
+      },
     },
   },
 );
