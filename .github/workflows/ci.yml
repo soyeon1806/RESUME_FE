@@ -33,3 +33,6 @@ jobs:
 
       - name: Run Prettier check
         run: pnpx prettier --check .
+
+      - name: Run Tests
+        run: pnpm run test -- --ci
