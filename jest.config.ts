@@ -13,6 +13,9 @@ const config: Config = {
     '^@/(.*)$': '<rootDir>/src/$1', // alias 사용할 경우
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy', // CSS 무시
   },
+  collectCoverage: true,
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'lcov'],
 };
 
 export default config;
