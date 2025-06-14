@@ -70,5 +70,5 @@
   },
 
   // TypeScript가 검사할 파일 범위 (src 폴더 안쪽만 포함)
-  "include": ["src"]
+  "include": ["src", "types/declarations.d.ts"]
 }
